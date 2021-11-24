@@ -1,34 +1,27 @@
-## Wobble
+## Messaging
 
-This is our high-quality wobbles API. You can use this API to request
-and remove different wobbles at a low wibble price.
+Enable patients and providers to individually and group message others.
 
-### List wobbles
+### Create a message thread
 
-Lists all wobbles for a particular account.
+Creates a message thread between selected users and returns a message thread ID. If message thread already exists between selected users, returns existing messaging thread ID.
+
+#### Example request body
+
+```json
+{
+  "name": "foo",
+  "description": "bar"
+}
+```
+
+Property | Description
+---|---
+`name` | (optional) the name of the wobble
+`description` | (optional) a description of the wobble
 
 ```endpoint
-GET /wobbles/v1/{username}
-```
-
-#### Example request
-
-```curl
-$ curl https://wobble.biz/wobbles/v1/{username}
-```
-
-```bash
-$ wbl wobbles list
-```
-
-```javascript
-client.listWobbles(function(err, wobbles) {
-  console.log(wobbles);
-});
-```
-
-```python
-wobbles.list()
+POST /users/{userID}/messagethread
 ```
 
 #### Example response
@@ -50,7 +43,15 @@ wobbles.list()
 ]
 ```
 
-### Create wobble
+### Create message 
+
+### Get all message threads
+
+### Get all messages in message thread
+
+### Get lastest message in thread
+
+### Get list of users user can message
 
 Creates a new, empty wobble.
 
@@ -109,7 +110,7 @@ Property | Description
 }
 ```
 
-### Retrieve a wobble
+### 
 
 Returns a single wobble.
 
