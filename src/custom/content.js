@@ -11,7 +11,4 @@ var fs = require('fs');
  */
 module.exports =
   '# Introduction\n' +
-  fs.readFileSync('./content/introduction.md', 'utf8') + '\n' +
-
-  '# Telehealth\n' +
-  fs.readFileSync('./content/telehealth.md', 'utf8') + '\n';
+  fs.readFileSync('./content/introduction.md', 'utf8') + '\n';
