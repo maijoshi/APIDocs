@@ -29,4 +29,6 @@ module.exports =
   '# Notifications\n' +
   fs.readFileSync('./content/notifications.md', 'utf8') + '\n' +
   '# Prescriptions\n' +
-  fs.readFileSync('./content/prescriptions.md', 'utf8') + '\n';
+  fs.readFileSync('./content/prescriptions.md', 'utf8') + '\n' +
+  '# General\n' +
+  fs.readFileSync('./content/general.md', 'utf8') + '\n';

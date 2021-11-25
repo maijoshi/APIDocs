@@ -10,11 +10,11 @@
     <link href='css/railscasts.css' rel='stylesheet' />
   </head>
   <body>
-    <!--START--><div id='app'><div class="container unlimiter" data-reactroot="" data-reactid="1" data-react-checksum="1217281001"><div class="fixed-top fixed-right space-left16" data-reactid="2"><div class="fill-light col6 pin-right" data-reactid="3"></div></div><div class="space-top5 scroll-styled overflow-auto pad1 width16 sidebar fixed-left fill-dark dark" data-reactid="4"><div class="pad0x small" data-reactid="5"><div class="small pad0x quiet space-top1" data-reactid="6">Introduction</div><a href="#api" class="line-height15 pad0x pad00y quiet block " data-reactid="7">API</a><div class="small pad0x quiet space-top1" data-reactid="8">Telehealth</div><a href="#messaging" class="line-height15 pad0x pad00y quiet block " data-reactid="9">Messaging</a><a href="#scheduling" class="line-height15 pad0x pad00y quiet block " data-reactid="10">Scheduling</a><div class="small pad0x quiet space-top1" data-reactid="11">Payment</div><a href="#stripe-payment" class="line-height15 pad0x pad00y quiet block " data-reactid="12">Stripe Payment</a><div class="small pad0x quiet space-top1" data-reactid="13">Health Record</div><a href="#vitals" class="line-height15 pad0x pad00y quiet block " data-reactid="14">Vitals</a><div class="small pad0x quiet space-top1" data-reactid="15">Notes</div><a href="#care-plans" class="line-height15 pad0x pad00y quiet block " data-reactid="16">Care Plans</a><a href="#notes-1" class="line-height15 pad0x pad00y quiet block " data-reactid="17">Notes</a><div class="small pad0x quiet space-top1" data-reactid="18">Surveys</div><a href="#surveys-1" class="line-height15 pad0x pad00y quiet block " data-reactid="19">Surveys</a><div class="small pad0x quiet space-top1" data-reactid="20">Groups</div><a href="#care-teams" class="line-height15 pad0x pad00y quiet block " data-reactid="21">Care Teams</a><a href="#peer-groups" class="line-height15 pad0x pad00y quiet block " data-reactid="22">Peer groups</a><div class="small pad0x quiet space-top1" data-reactid="23">Educational Content</div><div class="small pad0x quiet space-top1" data-reactid="24">Notifications</div><div class="small pad0x quiet space-top1" data-reactid="25">Prescriptions</div></div></div><div class="space-left16" data-reactid="26"><div class="" data-reactid="27"><div class="clearfix" data-reactid="28"><div data-title="API" class="keyline-top section contain clearfix " data-reactid="29"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="30"><h2 id="api">API</h2>
+    <!--START--><div id='app'><div class="container unlimiter" data-reactroot="" data-reactid="1" data-react-checksum="-175238239"><div class="fixed-top fixed-right space-left16" data-reactid="2"><div class="fill-light col6 pin-right" data-reactid="3"></div></div><div class="space-top5 scroll-styled overflow-auto pad1 width16 sidebar fixed-left fill-dark dark" data-reactid="4"><div class="pad0x small" data-reactid="5"><div class="small pad0x quiet space-top1" data-reactid="6">Introduction</div><a href="#api" class="line-height15 pad0x pad00y quiet block " data-reactid="7">API</a><div class="small pad0x quiet space-top1" data-reactid="8">Telehealth</div><a href="#messaging" class="line-height15 pad0x pad00y quiet block " data-reactid="9">Messaging</a><a href="#scheduling" class="line-height15 pad0x pad00y quiet block " data-reactid="10">Scheduling</a><div class="small pad0x quiet space-top1" data-reactid="11">Payment</div><a href="#stripe-payment" class="line-height15 pad0x pad00y quiet block " data-reactid="12">Stripe Payment</a><div class="small pad0x quiet space-top1" data-reactid="13">Health Record</div><a href="#vitals" class="line-height15 pad0x pad00y quiet block " data-reactid="14">Vitals</a><div class="small pad0x quiet space-top1" data-reactid="15">Notes</div><a href="#care-plans" class="line-height15 pad0x pad00y quiet block " data-reactid="16">Care Plans</a><a href="#notes-1" class="line-height15 pad0x pad00y quiet block " data-reactid="17">Notes</a><div class="small pad0x quiet space-top1" data-reactid="18">Surveys</div><a href="#surveys-1" class="line-height15 pad0x pad00y quiet block " data-reactid="19">Surveys</a><div class="small pad0x quiet space-top1" data-reactid="20">Groups</div><a href="#care-teams" class="line-height15 pad0x pad00y quiet block " data-reactid="21">Care Teams</a><a href="#peer-groups" class="line-height15 pad0x pad00y quiet block " data-reactid="22">Peer Groups</a><div class="small pad0x quiet space-top1" data-reactid="23">Educational Content</div><a href="#courses" class="line-height15 pad0x pad00y quiet block " data-reactid="24">Courses</a><a href="#resources" class="line-height15 pad0x pad00y quiet block " data-reactid="25">Resources</a><div class="small pad0x quiet space-top1" data-reactid="26">Notifications</div><a href="#notifications-1" class="line-height15 pad0x pad00y quiet block " data-reactid="27">Notifications</a><div class="small pad0x quiet space-top1" data-reactid="28">Prescriptions</div><a href="#e-prescribing" class="line-height15 pad0x pad00y quiet block " data-reactid="29">E-Prescribing</a><a href="#prescription-fulfillment" class="line-height15 pad0x pad00y quiet block " data-reactid="30">Prescription Fulfillment</a><div class="small pad0x quiet space-top1" data-reactid="31">General</div><a href="#user-data" class="line-height15 pad0x pad00y quiet block " data-reactid="32">User Data</a></div></div><div class="space-left16" data-reactid="33"><div class="" data-reactid="34"><div class="clearfix" data-reactid="35"><div data-title="API" class="keyline-top section contain clearfix " data-reactid="36"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="37"><h2 id="api">API</h2>
 <p>Welcome to Avon Health's API documentation!</p>
-</div></div><div data-title="Messaging" class="keyline-top section contain clearfix " data-reactid="31"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="32"><h2 id="messaging">Messaging</h2>
+</div></div><div data-title="Messaging" class="keyline-top section contain clearfix " data-reactid="38"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="39"><h2 id="messaging">Messaging</h2>
 <p>Enable patients and providers to individually and group message others.</p>
-</div></div><div data-title="Create a message thread" class="keyline-top section contain clearfix " data-reactid="33"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="34"><h3 id="create-a-message-thread">Create a message thread</h3>
+</div></div><div data-title="Create a message thread" class="keyline-top section contain clearfix " data-reactid="40"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="41"><h3 id="create-a-message-thread">Create a message thread</h3>
 <p>Creates a message thread between selected users and returns a message thread ID. If message thread already exists between selected users, returns existing messaging thread ID.</p>
 <table>
 <thead>
@@ -32,7 +32,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="35"><h4 id="example-request-body">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="42"><h4 id="example-request-body">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"members"</span>: [<span class="hljs-string">"Sally"</span>, <span class="hljs-string">"Neal"</span>]
 }</pre>
@@ -44,7 +44,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{message_thread_id}"</span>
 }</pre>
-</div></div><div data-title="Create a message" class="keyline-top section contain clearfix " data-reactid="36"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="37"><h3 id="create-a-message">Create a message</h3>
+</div></div><div data-title="Create a message" class="keyline-top section contain clearfix " data-reactid="43"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="44"><h3 id="create-a-message">Create a message</h3>
 <p>Creates a new message in message thread</p>
 <table>
 <thead>
@@ -77,7 +77,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="38"><h4 id="example-request-body-1">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="45"><h4 id="example-request-body-1">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"messageThreadID"</span>: <span class="hljs-string">"{message_thread_id}"</span>,
   <span class="hljs-attr">"sender"</span>: <span class="hljs-string">"{user_id}"</span>,
@@ -92,7 +92,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{message_id}"</span>
 }</pre>
-</div></div><div data-title="Get message threads" class="keyline-top section contain clearfix " data-reactid="39"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="40"><h3 id="get-message-threads">Get message threads</h3>
+</div></div><div data-title="Get message threads" class="keyline-top section contain clearfix " data-reactid="46"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="47"><h3 id="get-message-threads">Get message threads</h3>
 <p>Get all message threads for user</p>
 <table>
 <thead>
@@ -110,7 +110,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="41"><h4 id="example-request-body-2">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="48"><h4 id="example-request-body-2">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"{user_id}"</span>
 }</pre>
@@ -132,7 +132,7 @@
     "readBy": ["user1_id"]
   }
 ]}</pre>
-</div></div><div data-title="Get messages" class="keyline-top section contain clearfix " data-reactid="42"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="43"><h3 id="get-messages">Get messages</h3>
+</div></div><div data-title="Get messages" class="keyline-top section contain clearfix " data-reactid="49"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="50"><h3 id="get-messages">Get messages</h3>
 <p>Get all messages in a message thread</p>
 <table>
 <thead>
@@ -150,7 +150,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="44"><h4 id="example-request-body-3">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="51"><h4 id="example-request-body-3">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"message_thread_id"</span>: <span class="hljs-string">"{message_thread_id}"</span>
 }</pre>
@@ -169,7 +169,7 @@
   <span class="hljs-attr">"mostRecentTimestamp"</span>: <span class="hljs-number">1637734361</span>,
   <span class="hljs-attr">"readBy"</span>: [<span class="hljs-string">"user1_id"</span>]
 }</pre>
-</div></div><div data-title="Get chattable users" class="keyline-top section contain clearfix " data-reactid="45"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="46"><h3 id="get-chattable-users">Get chattable users</h3>
+</div></div><div data-title="Get chattable users" class="keyline-top section contain clearfix " data-reactid="52"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="53"><h3 id="get-chattable-users">Get chattable users</h3>
 <p>Get list of users that user is allowed to message</p>
 <table>
 <thead>
@@ -192,7 +192,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="47"><h4 id="example-request-body-4">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="54"><h4 id="example-request-body-4">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"{user_id}"</span>,
   <span class="hljs-attr">"can_message"</span>: <span class="hljs-string">"peerGroup"</span>
@@ -205,9 +205,9 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"members"</span>: [<span class="hljs-string">"user1_id"</span>, <span class="hljs-string">"user2_id"</span>]
 }</pre>
-</div></div><div data-title="Scheduling" class="keyline-top section contain clearfix " data-reactid="48"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="49"><h2 id="scheduling">Scheduling</h2>
+</div></div><div data-title="Scheduling" class="keyline-top section contain clearfix " data-reactid="55"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="56"><h2 id="scheduling">Scheduling</h2>
 <p>Set and view appointment schedules. Enable patients to schedule and pay for appointments.</p>
-</div></div><div data-title="Set appointment schedule" class="keyline-top section contain clearfix " data-reactid="50"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="51"><h3 id="set-appointment-schedule">Set appointment schedule</h3>
+</div></div><div data-title="Set appointment schedule" class="keyline-top section contain clearfix " data-reactid="57"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="58"><h3 id="set-appointment-schedule">Set appointment schedule</h3>
 <p>Set available appointment schedule, length of appointments, and cost of appointments for a provider</p>
 <table>
 <thead>
@@ -250,7 +250,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="52"><h4 id="example-request-body-5">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="59"><h4 id="example-request-body-5">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
   <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1638934456</span>,
@@ -267,7 +267,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"appointment_schedule_id"</span>: <span class="hljs-string">"appointment_schedule_id"</span>
 }</pre>
-</div></div><div data-title="Schedule appointment" class="keyline-top section contain clearfix " data-reactid="53"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="54"><h3 id="schedule-appointment">Schedule appointment</h3>
+</div></div><div data-title="Schedule appointment" class="keyline-top section contain clearfix " data-reactid="60"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="61"><h3 id="schedule-appointment">Schedule appointment</h3>
 <p>Schedule an appointment. If 'paid_appointment' has been set to true for this '{schedule_id}', prompts patient to pay for the appointment before booking. If 'create_video_call_link' has been set to true for this '{schedule_id}', creates video call link for the appointment. </p>
 <table>
 <thead>
@@ -295,7 +295,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="55"><h4 id="example-request-body-6">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="62"><h4 id="example-request-body-6">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"appointment_schedule_id"</span>: <span class="hljs-string">"{appointment_schedule_id}"</span>,
   <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
@@ -309,7 +309,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"appointment_schedule_id"</span>: <span class="hljs-string">"appointment_schedule_id"</span>
 }</pre>
-</div></div><div data-title="Get available appointments" class="keyline-top section contain clearfix " data-reactid="56"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="57"><h3 id="get-available-appointments">Get available appointments</h3>
+</div></div><div data-title="Get available appointments" class="keyline-top section contain clearfix " data-reactid="63"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="64"><h3 id="get-available-appointments">Get available appointments</h3>
 <p>Get all available appointments. Optionally filter to only see available appointments for certain providers. </p>
 <table>
 <thead>
@@ -337,7 +337,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="58"><h4 id="example-request-body-7">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="65"><h4 id="example-request-body-7">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
   <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1638945679</span>,
@@ -360,7 +360,7 @@
     }
   ]
 }</pre>
-</div></div><div data-title="Get booked appointments" class="keyline-top section contain clearfix " data-reactid="59"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="60"><h3 id="get-booked-appointments">Get booked appointments</h3>
+</div></div><div data-title="Get booked appointments" class="keyline-top section contain clearfix " data-reactid="66"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="67"><h3 id="get-booked-appointments">Get booked appointments</h3>
 <p>Get all booked appointments (both past and upcoming) with URLs to starts and join the video call. Optionally filter to only see booked appointments for certain providers and/or certain patients.</p>
 <table>
 <thead>
@@ -393,7 +393,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="61"><h4 id="example-request-body-8">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="68"><h4 id="example-request-body-8">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
   <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1638945679</span>,
@@ -419,10 +419,10 @@
     }
   ]
 }</pre>
-</div></div><div data-title="Get appointment details" class="keyline-top section contain clearfix " data-reactid="62"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="63"><h3 id="get-appointment-details">Get appointment details</h3>
+</div></div><div data-title="Get appointment details" class="keyline-top section contain clearfix " data-reactid="69"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="70"><h3 id="get-appointment-details">Get appointment details</h3>
 <p>Get appointment details for a particular appointment id. </p>
 <p>No parameters.</p>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="64"><div class='endpoint dark fill-dark round '>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="71"><div class='endpoint dark fill-dark round '>
       <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
       <div class='pad0 code small endpoint-url'>/schedule/<span class="strong">{appointment_id}</span></div>
     </div>
@@ -435,9 +435,9 @@
   <span class="hljs-attr">"appointment_length"</span>: <span class="hljs-number">30</span>,
   <span class="hljs-attr">"appointment_join_url"</span>: <span class="hljs-string">"https://us02web.zoom.us/s/83531877803?zak=5396839"</span>
 }</pre>
-</div></div><div data-title="Stripe Payment" class="keyline-top section contain clearfix " data-reactid="65"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="66"><h2 id="stripe-payment">Stripe Payment</h2>
+</div></div><div data-title="Stripe Payment" class="keyline-top section contain clearfix " data-reactid="72"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="73"><h2 id="stripe-payment">Stripe Payment</h2>
 <p>Enable patients to pay using Stripe.</p>
-</div></div><div data-title="Collect payment" class="keyline-top section contain clearfix " data-reactid="67"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="68"><h3 id="collect-payment">Collect payment</h3>
+</div></div><div data-title="Collect payment" class="keyline-top section contain clearfix " data-reactid="74"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="75"><h3 id="collect-payment">Collect payment</h3>
 <p>Collect payment from patients. </p>
 <table>
 <thead>
@@ -460,7 +460,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="69"><h4 id="example-request-body-9">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="76"><h4 id="example-request-body-9">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"item"</span>: <span class="hljs-string">"Dermatology Appointment"</span>,
   <span class="hljs-attr">"cost"</span>: <span class="hljs-number">7000</span>
@@ -473,7 +473,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{payment_id}"</span>
 }</pre>
-</div></div><div data-title="View invoices" class="keyline-top section contain clearfix " data-reactid="70"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="71"><h3 id="view-invoices">View invoices</h3>
+</div></div><div data-title="View invoices" class="keyline-top section contain clearfix " data-reactid="77"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="78"><h3 id="view-invoices">View invoices</h3>
 <p>View invoices of all payments. Optionally, filter invoices list by patients and/or providers.</p>
 <table>
 <thead>
@@ -496,7 +496,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="72"><h4 id="example-request-body-10">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="79"><h4 id="example-request-body-10">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"patient1_id"</span>, <span class="hljs-string">"patient2_id"</span>],
   <span class="hljs-attr">"provider_ids"</span>: [<span class="hljs-string">"provider1_id"</span>, <span class="hljs-string">"provider2_id"</span>]
@@ -518,9 +518,9 @@
         }
     ]
 }</pre>
-</div></div><div data-title="Vitals" class="keyline-top section contain clearfix " data-reactid="73"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="74"><h2 id="vitals">Vitals</h2>
+</div></div><div data-title="Vitals" class="keyline-top section contain clearfix " data-reactid="80"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="81"><h2 id="vitals">Vitals</h2>
 <p>Set vitals for patients to track. Enable patients to track vitals and view logged data.</p>
-</div></div><div data-title="Create vital" class="keyline-top section contain clearfix " data-reactid="75"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="76"><h3 id="create-vital">Create vital</h3>
+</div></div><div data-title="Create vital" class="keyline-top section contain clearfix " data-reactid="82"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="83"><h3 id="create-vital">Create vital</h3>
 <p>Create a health vital (e.g. blood sugar, exercise) for the patient to track. Optionally, specify which patients should be tracking these vitals. </p>
 <table>
 <thead>
@@ -573,7 +573,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="77"><h4 id="example-request-body-11">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="84"><h4 id="example-request-body-11">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Exercise"</span>,
   <span class="hljs-attr">"parameters"</span>: [{
@@ -599,7 +599,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{vital_id}"</span>
 }</pre>
-</div></div><div data-title="Get vitals for patients to track" class="keyline-top section contain clearfix " data-reactid="78"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="79"><h3 id="get-vitals-for-patients-to-track">Get vitals for patients to track</h3>
+</div></div><div data-title="Get vitals for patients to track" class="keyline-top section contain clearfix " data-reactid="85"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="86"><h3 id="get-vitals-for-patients-to-track">Get vitals for patients to track</h3>
 <p>Get all vital that patients are supposed to track. Optionally, specifiy a specific patients of whom you want to see which vitals they are supposed to track.  </p>
 <table>
 <thead>
@@ -617,7 +617,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="80"><h4 id="example-request-body-12">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="87"><h4 id="example-request-body-12">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>],
 }</pre>
@@ -652,7 +652,7 @@
   ]
   
 }</pre>
-</div></div><div data-title="Log vital" class="keyline-top section contain clearfix " data-reactid="81"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="82"><h3 id="log-vital">Log vital</h3>
+</div></div><div data-title="Log vital" class="keyline-top section contain clearfix " data-reactid="88"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="89"><h3 id="log-vital">Log vital</h3>
 <p>Log patient-reported data for a vital</p>
 <table>
 <thead>
@@ -685,7 +685,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="83"><h4 id="example-request-body-13">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="90"><h4 id="example-request-body-13">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"vital_id"</span>: <span class="hljs-string">"{vital_id}"</span>,
   <span class="hljs-attr">"patient_id"</span>: <span class="hljs-string">"{patient_id}"</span>,
@@ -707,7 +707,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{data_point_id}"</span>
 }</pre>
-</div></div><div data-title="View raw logged vitals data" class="keyline-top section contain clearfix " data-reactid="84"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="85"><h3 id="view-raw-logged-vitals-data">View raw logged vitals data</h3>
+</div></div><div data-title="View raw logged vitals data" class="keyline-top section contain clearfix " data-reactid="91"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="92"><h3 id="view-raw-logged-vitals-data">View raw logged vitals data</h3>
 <p>View raw logged vital data. Optionally, specify which patients logged raw logged data you want to see. By default, get logged data from all patients.  </p>
 <table>
 <thead>
@@ -725,7 +725,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="86"><h4 id="example-request-body-14">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="93"><h4 id="example-request-body-14">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>],
 }</pre>
@@ -749,7 +749,7 @@
     }
   ]
 }</pre>
-</div></div><div data-title="View average vitals data" class="keyline-top section contain clearfix " data-reactid="87"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="88"><h3 id="view-average-vitals-data">View average vitals data</h3>
+</div></div><div data-title="View average vitals data" class="keyline-top section contain clearfix " data-reactid="94"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="95"><h3 id="view-average-vitals-data">View average vitals data</h3>
 <p>View daily average value for each vital. Optionally, specify which patients you want average values for. By default, returns daily average values across all patients.</p>
 <table>
 <thead>
@@ -767,7 +767,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="89"><h4 id="example-request-body-15">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="96"><h4 id="example-request-body-15">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>],
 }</pre>
@@ -794,9 +794,9 @@
     }
   ]
 }</pre>
-</div></div><div data-title="Care Plans" class="keyline-top section contain clearfix " data-reactid="90"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="91"><h2 id="care-plans">Care Plans</h2>
+</div></div><div data-title="Care Plans" class="keyline-top section contain clearfix " data-reactid="97"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="98"><h2 id="care-plans">Care Plans</h2>
 <p>Create, view, and complete care plan tasks. </p>
-</div></div><div data-title="Create care plan task" class="keyline-top section contain clearfix " data-reactid="92"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="93"><h3 id="create-care-plan-task">Create care plan task</h3>
+</div></div><div data-title="Create care plan task" class="keyline-top section contain clearfix " data-reactid="99"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="100"><h3 id="create-care-plan-task">Create care plan task</h3>
 <p>Create care plan task for patient.</p>
 <table>
 <thead>
@@ -844,7 +844,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="94"><h4 id="example-request-body-16">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="101"><h4 id="example-request-body-16">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"task"</span>: <span class="hljs-string">"Schedule an appointment with the endocronologist"</span>,
   <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Blood sugar levels are looking a bit higher than normal. Let's get an appointment scheduled to proactively debug the problem."</span>,
@@ -862,7 +862,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{care_plan_task_id}"</span>
 }</pre>
-</div></div><div data-title="View care plan" class="keyline-top section contain clearfix " data-reactid="95"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="96"><h3 id="view-care-plan">View care plan</h3>
+</div></div><div data-title="View care plan" class="keyline-top section contain clearfix " data-reactid="102"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="103"><h3 id="view-care-plan">View care plan</h3>
 <p>View all care plan tasks. Optionally, filter by which patient task is for and who task is visible to. By default, returns all care plan tasks. </p>
 <table>
 <thead>
@@ -885,7 +885,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="97"><h4 id="example-request-body-17">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="104"><h4 id="example-request-body-17">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>],
   <span class="hljs-attr">"visible_to_ids"</span>: [<span class="hljs-string">"{user1_id}"</span>, <span class="hljs-string">"{user2_id}"</span>]
@@ -912,7 +912,7 @@
         }
     ]
 }</pre>
-</div></div><div data-title="Complete care plan task" class="keyline-top section contain clearfix " data-reactid="98"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="99"><h3 id="complete-care-plan-task">Complete care plan task</h3>
+</div></div><div data-title="Complete care plan task" class="keyline-top section contain clearfix " data-reactid="105"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="106"><h3 id="complete-care-plan-task">Complete care plan task</h3>
 <p>Mark a care plan task as completed.</p>
 <table>
 <thead>
@@ -930,7 +930,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="100"><h4 id="example-request-body-18">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="107"><h4 id="example-request-body-18">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{care_plan_task_id}"</span>,
 }</pre>
@@ -942,9 +942,9 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"completed_on"</span>: <span class="hljs-number">1637735765</span>
 }</pre>
-</div></div><div data-title="Notes" class="keyline-top section contain clearfix " data-reactid="101"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="102"><h2 id="notes-1">Notes</h2>
+</div></div><div data-title="Notes" class="keyline-top section contain clearfix " data-reactid="108"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="109"><h2 id="notes-1">Notes</h2>
 <p>Create and view notes. </p>
-</div></div><div data-title="Create note" class="keyline-top section contain clearfix " data-reactid="103"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="104"><h3 id="create-note">Create note</h3>
+</div></div><div data-title="Create note" class="keyline-top section contain clearfix " data-reactid="110"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="111"><h3 id="create-note">Create note</h3>
 <p>Create care plan task for patient.</p>
 <table>
 <thead>
@@ -977,7 +977,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="105"><h4 id="example-request-body-19">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="112"><h4 id="example-request-body-19">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"note"</span>: <span class="hljs-string">"Patient's blood sugar levels have been dropping."</span>,
   <span class="hljs-attr">"patient_id"</span>: <span class="hljs-string">"{patient_id}"</span>,
@@ -992,7 +992,7 @@
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{note_id}"</span>
 }</pre>
-</div></div><div data-title="View notes" class="keyline-top section contain clearfix " data-reactid="106"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="107"><h3 id="view-notes">View notes</h3>
+</div></div><div data-title="View notes" class="keyline-top section contain clearfix " data-reactid="113"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="114"><h3 id="view-notes">View notes</h3>
 <p>View all notes. Optionally, filter by which patient note is for and who note is visible to. By default, returns all notes. </p>
 <table>
 <thead>
@@ -1015,7 +1015,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="108"><h4 id="example-request-body-20">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="115"><h4 id="example-request-body-20">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>],
   <span class="hljs-attr">"visible_to_ids"</span>: [<span class="hljs-string">"{user1_id}"</span>, <span class="hljs-string">"{user2_id}"</span>]
@@ -1037,11 +1037,271 @@
         }
     ]
 }</pre>
-</div></div><div data-title="Surveys" class="keyline-top section contain clearfix " data-reactid="109"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="110"><h2 id="surveys-1">Surveys</h2>
-<p>Create, answer, and view results to surveys. </p>
-</div></div><div data-title="Care Teams" class="keyline-top section contain clearfix " data-reactid="111"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="112"><h2 id="care-teams">Care Teams</h2>
+</div></div><div data-title="Surveys" class="keyline-top section contain clearfix " data-reactid="116"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="117"><h2 id="surveys-1">Surveys</h2>
+<p>Create, complete, and view results to surveys. </p>
+</div></div><div data-title="Create a survey" class="keyline-top section contain clearfix " data-reactid="118"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="119"><h3 id="create-a-survey">Create a survey</h3>
+<p>Create a survey with conditional branching and logic jumps. Optionally, specify which patients survey should be sent to. By default, survey is sent to all patients. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Name of survey</td>
+</tr>
+<tr>
+<td><code>questions/title</code></td>
+<td>String</td>
+<td>Title of survey question</td>
+</tr>
+<tr>
+<td><code>questions/question_type</code></td>
+<td>String</td>
+<td>Type of survey question (options are "Short Answer", "Number", "Paragraph", "Multiple Choice", "Multiselect", "Date", and "Picture")</td>
+</tr>
+<tr>
+<td><code>questions/allow_other_option</code></td>
+<td>Bool</td>
+<td>Only if 'Multiselect' or 'Multiple Choice' is selected, whether or not patient can select "Other" as a response</td>
+</tr>
+<tr>
+<td><code>questions/allow_customer_entry</code></td>
+<td>Bool</td>
+<td>Only if 'allow_other_option' is selected, whether or not patient can write in custom response</td>
+</tr>
+<tr>
+<td><code>questions/items</code></td>
+<td>String array</td>
+<td>Only if 'Multiselect' or 'Multiple Choice' is selected, response items that the patient can select from</td>
+</tr>
+<tr>
+<td><code>questions/tag</code></td>
+<td>String</td>
+<td>Unique tag used to identify this survey question</td>
+</tr>
+<tr>
+<td><code>questions/logic/if/condition</code></td>
+<td>String</td>
+<td>Only if 'Multiselect' or 'Multiple Choice' is selected, condition that needs to be met. Options are: 'is' or 'is not'</td>
+</tr>
+<tr>
+<td><code>questions/logic/if/choice</code></td>
+<td>String</td>
+<td>Only if 'Multiselect' or 'Multiple Choice' is selected, condition that needs to be selected/not selected (depending on whether 'is' or 'is not' was selected for the 'condition')</td>
+</tr>
+<tr>
+<td><code>questions/logic/then/action</code></td>
+<td>String</td>
+<td>Only if 'Multiselect' or 'Multiple Choice' is selected, action that will be taken. Options are: 'show' and 'jump'</td>
+</tr>
+<tr>
+<td><code>questions/logic/then/show</code></td>
+<td>String</td>
+<td>Only if 'Multiselect' or 'Multiple Choice' is selected, text that will be shown if condition is met</td>
+</tr>
+<tr>
+<td><code>questions/logic/then/jump_to</code></td>
+<td>String</td>
+<td>Only if 'Multiselect' or 'Multiple Choice' is selected, tag of survey question that needs to be jumped to if condition is met</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="120"><h4 id="example-request-body-21">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Intake Form"</span>,
+  <span class="hljs-attr">"questions"</span>: [
+      {
+          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"What medications are you currently taking?"</span>,
+          <span class="hljs-attr">"question_type"</span>: <span class="hljs-string">"Multiselect"</span>,
+          <span class="hljs-attr">"allow_other_option"</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">"allow_custom_entry"</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">"items"</span>: [<span class="hljs-string">"Metformin"</span>],
+          <span class="hljs-attr">"tag"</span>: <span class="hljs-string">"medications"</span>,
+          <span class="hljs-attr">"logic"</span>: [
+              {
+                <span class="hljs-attr">"if"</span>: {
+                    <span class="hljs-attr">"condition"</span>: <span class="hljs-string">"is"</span>,
+                    <span class="hljs-attr">"choice"</span>: <span class="hljs-string">"Metformin"</span>
+                },
+                <span class="hljs-attr">"then"</span>: {
+                    <span class="hljs-attr">"action"</span>: <span class="hljs-string">"show"</span>,
+                    <span class="hljs-attr">"show"</span>: <span class="hljs-string">"Metformin is a.."</span>
+                }
+              }
+          ]
+      }
+  ],
+  <span class="hljs-attr">"visible_to_everyone"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"visible_to"</span>: [<span class="hljs-string">"{patient1_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/surveys</div>
+    </div>
+<h4 id="example-response-22">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{survey_id}"</span>
+}</pre>
+</div></div><div data-title="Get surveys" class="keyline-top section contain clearfix " data-reactid="121"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="122"><h3 id="get-surveys">Get surveys</h3>
+<p>Get all surveys and view which patients have completed them. Optionally, filter surveys based on patients. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) List of patient IDs for whom you want to retrieve all surveys for.  By default, all surveys for all patients are returned.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="123"><h4 id="example-request-body-22">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/surveys</div>
+    </div>
+<h4 id="example-response-23">Example response</h4>
+<pre class='hljs'>{
+  [
+      {
+        "id": "{survey_id}",
+        "name": "Intake Form",
+        "questions": [
+            {
+                "id": "{survey_question_id}",
+                "title": "What medications are you currently taking?",
+                "question_type": "Multiselect",
+                "allow_other_option": true,
+                "allow_custom_entry": true,
+                "items": ["Metformin"],
+                "tag": "medications",
+                "logic": [
+                    {
+                        "if": {
+                            "condition": "is",
+                            "choice": "Metformin"
+                        },
+                        "then": {
+                            "action": "show",
+                            "show": "Metformin is a.."
+                        }
+                    }
+                ]
+            }
+        ],
+        "visible_to_everyone": false,
+        "visible_to": ["{patient1_id}"],
+        "completed_by": ["{patient1_id}"]
+        }
+  ]
+}</pre>
+</div></div><div data-title="Log survey results" class="keyline-top section contain clearfix " data-reactid="124"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="125"><h3 id="log-survey-results">Log survey results</h3>
+<p>Log patient's responses to survey</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_id</code></td>
+<td>String</td>
+<td>ID of patient completing the survey</td>
+</tr>
+<tr>
+<td><code>questions/id</code></td>
+<td>String</td>
+<td>Survey question ID</td>
+</tr>
+<tr>
+<td><code>questions/response</code></td>
+<td>String</td>
+<td>Patient's response to the survey question</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="126"><h4 id="example-request-body-23">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"patient_id"</span>: <span class="hljs-string">"{patient_id}"</span>,
+  <span class="hljs-attr">"questions"</span>: [
+      {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{survey_question_id}"</span>,
+          <span class="hljs-attr">"response"</span>: [<span class="hljs-string">"Metformin"</span>]
+      }
+  ],
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/survey/<span class="strong">{survey_id}</span></div>
+    </div>
+<h4 id="example-response-24">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{survey_response_id}"</span>
+}</pre>
+</div></div><div data-title="View survey results" class="keyline-top section contain clearfix " data-reactid="127"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="128"><h3 id="view-survey-results">View survey results</h3>
+<p>View survey results. Optionally, filter responses to only see selected patients' responses. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) List of patient IDs for whom you want to retrieve all survey results for.  By default, all survey results for all patients are returned.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="129"><h4 id="example-request-body-24">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/surveys/results</div>
+    </div>
+<h4 id="example-response-25">Example response</h4>
+<pre class='hljs'>{
+  [
+      {
+        "id": "{survey_id}",
+        "name": "Intake Form",
+        "patient_id": "{patient_id}",
+        "completed_at": 1637734361,
+        "questions": [
+            {
+                "id": "{survey_question_id}",
+                "title": "What medications are you currently taking?",
+                "response": ["Metformin"]
+            }
+        ],
+    }
+  ]
+}</pre>
+</div></div><div data-title="Care Teams" class="keyline-top section contain clearfix " data-reactid="130"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="131"><h2 id="care-teams">Care Teams</h2>
 <p>Create, update, and view patient care teams. </p>
-</div></div><div data-title="Create care team" class="keyline-top section contain clearfix " data-reactid="113"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="114"><h3 id="create-care-team">Create care team</h3>
+</div></div><div data-title="Create care team" class="keyline-top section contain clearfix " data-reactid="132"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="133"><h3 id="create-care-team">Create care team</h3>
 <p>Create a care team for a patient</p>
 <table>
 <thead>
@@ -1069,7 +1329,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="115"><h4 id="example-request-body-21">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="134"><h4 id="example-request-body-25">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_id"</span>: <span class="hljs-string">"{patient_id}"</span>,
   <span class="hljs-attr">"care_team"</span>: [
@@ -1087,11 +1347,11 @@
       <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
       <div class='pad0 code small endpoint-url'>/careTeam</div>
     </div>
-<h4 id="example-response-22">Example response</h4>
+<h4 id="example-response-26">Example response</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{care_team_id}"</span>
 }</pre>
-</div></div><div data-title="Update care team" class="keyline-top section contain clearfix " data-reactid="116"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="117"><h3 id="update-care-team">Update care team</h3>
+</div></div><div data-title="Update care team" class="keyline-top section contain clearfix " data-reactid="135"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="136"><h3 id="update-care-team">Update care team</h3>
 <p>Update care team for a patient</p>
 <table>
 <thead>
@@ -1119,7 +1379,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="118"><h4 id="example-request-body-22">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="137"><h4 id="example-request-body-26">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{care_team_id}"</span>,
   <span class="hljs-attr">"care_team"</span>: [
@@ -1137,11 +1397,11 @@
       <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>PATCH</div>
       <div class='pad0 code small endpoint-url'>/careTeam</div>
     </div>
-<h4 id="example-response-23">Example response</h4>
+<h4 id="example-response-27">Example response</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{care_team_id}"</span>
 }</pre>
-</div></div><div data-title="View care teams" class="keyline-top section contain clearfix " data-reactid="119"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="120"><h3 id="view-care-teams">View care teams</h3>
+</div></div><div data-title="View care teams" class="keyline-top section contain clearfix " data-reactid="138"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="139"><h3 id="view-care-teams">View care teams</h3>
 <p>View all care teams. Optionally, filter list based on patient or members in the care team.</p>
 <table>
 <thead>
@@ -1164,7 +1424,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="121"><h4 id="example-request-body-23">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="140"><h4 id="example-request-body-27">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>],
   <span class="hljs-attr">"care_team_member_ids"</span>: [<span class="hljs-string">"{provider1_id}"</span>, <span class="hljs-string">"{provider2_id}"</span>]
@@ -1173,7 +1433,7 @@
       <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
       <div class='pad0 code small endpoint-url'>/careTeam</div>
     </div>
-<h4 id="example-response-24">Example response</h4>
+<h4 id="example-response-28">Example response</h4>
 <pre class='hljs'>{
     [
         "id": "{care_team_id}",
@@ -1189,9 +1449,9 @@
         ]
     ]
 }</pre>
-</div></div><div data-title="Peer groups" class="keyline-top section contain clearfix " data-reactid="122"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="123"><h2 id="peer-groups">Peer groups</h2>
+</div></div><div data-title="Peer Groups" class="keyline-top section contain clearfix " data-reactid="141"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="142"><h2 id="peer-groups">Peer Groups</h2>
 <p>Create, update, and view patient peer groups. </p>
-</div></div><div data-title="Create care team" class="keyline-top section contain clearfix " data-reactid="124"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="125"><h3 id="create-care-team-1">Create care team</h3>
+</div></div><div data-title="Create peer group" class="keyline-top section contain clearfix " data-reactid="143"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="144"><h3 id="create-peer-group">Create peer group</h3>
 <p>Create a peer group</p>
 <table>
 <thead>
@@ -1209,7 +1469,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="126"><h4 id="example-request-body-24">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="145"><h4 id="example-request-body-28">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"peer_group"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
 }</pre>
@@ -1217,11 +1477,11 @@
       <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
       <div class='pad0 code small endpoint-url'>/peerGroup</div>
     </div>
-<h4 id="example-response-25">Example response</h4>
+<h4 id="example-response-29">Example response</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{peer_group_id}"</span>
 }</pre>
-</div></div><div data-title="Update peer group" class="keyline-top section contain clearfix " data-reactid="127"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="128"><h3 id="update-peer-group">Update peer group</h3>
+</div></div><div data-title="Update peer group" class="keyline-top section contain clearfix " data-reactid="146"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="147"><h3 id="update-peer-group">Update peer group</h3>
 <p>Update a peer group</p>
 <table>
 <thead>
@@ -1244,7 +1504,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="129"><h4 id="example-request-body-25">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="148"><h4 id="example-request-body-29">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{peer_group_id}"</span>,
   <span class="hljs-attr">"peer_group"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
@@ -1253,11 +1513,11 @@
       <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>PATCH</div>
       <div class='pad0 code small endpoint-url'>/peerGroup</div>
     </div>
-<h4 id="example-response-26">Example response</h4>
+<h4 id="example-response-30">Example response</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{peer_group_id}"</span>
 }</pre>
-</div></div><div data-title="View peer groups" class="keyline-top section contain clearfix " data-reactid="130"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="131"><h3 id="view-peer-groups">View peer groups</h3>
+</div></div><div data-title="View peer groups" class="keyline-top section contain clearfix " data-reactid="149"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="150"><h3 id="view-peer-groups">View peer groups</h3>
 <p>View all peer groups. Optionally, filter list based on members of the peer group.</p>
 <table>
 <thead>
@@ -1275,7 +1535,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="132"><h4 id="example-request-body-26">Example request body</h4>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="151"><h4 id="example-request-body-30">Example request body</h4>
 <pre class='hljs'>{
   <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>],
 }</pre>
@@ -1283,16 +1543,619 @@
       <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
       <div class='pad0 code small endpoint-url'>/peerGroup</div>
     </div>
-<h4 id="example-response-27">Example response</h4>
+<h4 id="example-response-31">Example response</h4>
 <pre class='hljs'>{
     [
         "id": "{peer_group_id}",
         "peer_group": ["{patient1_id}", "{patient2_id}"]
     ]
 }</pre>
-</div></div></div></div></div><div class="fixed-top space-left16" data-reactid="133"><div class="events fill-light bottom-shadow pad1 col6 pin-topright  " data-reactid="134"><div class="space-right1 small quiet inline" data-reactid="135">Show examples in:</div><div class="rounded-toggle inline short" data-reactid="136"><a class="strong active" data-reactid="137">cURL</a><a class="strong " data-reactid="138">cli</a><a class="strong " data-reactid="139">Python</a><a class="strong " data-reactid="140">JS</a><a class="strong " data-reactid="141">Java</a><a class="strong " data-reactid="142">ObjC</a><a class="strong " data-reactid="143">Swift</a></div><div class="fr pad0" data-reactid="144"><a title="Display as 1 column" style="cursor:pointer;" class="icon quiet caret-left pad0 fill-darken0 round" data-reactid="145"></a></div></div></div><div class="fill-dark dark bottom-shadow fixed-top pad0 width16" data-reactid="146"><a href="/" class="active space-top1 space-left1 pin-topleft icon round dark pad0 fill-red" data-reactid="147"></a><div class="strong small pad0
+</div></div><div data-title="Courses" class="keyline-top section contain clearfix " data-reactid="152"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="153"><h2 id="courses">Courses</h2>
+<p>Create and view courses. View analytics on course completion rates. </p>
+</div></div><div data-title="Create course" class="keyline-top section contain clearfix " data-reactid="154"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="155"><h3 id="create-course">Create course</h3>
+<p>Create a course. Optionally, specify which patients can view the course. By default, everyone can view all courses. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>course_name</code></td>
+<td>String</td>
+<td>Course name</td>
+</tr>
+<tr>
+<td><code>course_weeks/name</code></td>
+<td>String</td>
+<td>Course week name</td>
+</tr>
+<tr>
+<td><code>course_weeks/course_sections/name</code></td>
+<td>String</td>
+<td>Course section name</td>
+</tr>
+<tr>
+<td><code>course_weeks/course_sections/course_lectures/name</code></td>
+<td>String</td>
+<td>Course lecture name</td>
+</tr>
+<tr>
+<td><code>course_weeks/course_sections/course_lectures/type</code></td>
+<td>String</td>
+<td>Course lecture type options are "Article", "Video", and "Quiz")</td>
+</tr>
+<tr>
+<td><code>course_weeks/course_sections/course_lectures/url</code></td>
+<td>String</td>
+<td>Course lecture url</td>
+</tr>
+<tr>
+<td><code>viewable_to_everyone</code></td>
+<td>Bool</td>
+<td>Whether or not the course is viewable to all patients</td>
+</tr>
+<tr>
+<td><code>viewable_to</code></td>
+<td>String array</td>
+<td>(optional) If the course is not viewable to all patients, which patients the course is viewable to</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="156"><h4 id="example-request-body-31">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"course_name"</span>: <span class="hljs-string">"Nutrition 101"</span>,
+  <span class="hljs-attr">"course_weeks"</span>: [
+    {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Week 1"</span>,
+        <span class="hljs-attr">"course_sections"</span>: [
+            {
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Introduction to Nutrition"</span>,
+                <span class="hljs-attr">"course_lectures"</span>: [
+                    {
+                        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Foods to Eat"</span>,
+                        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Video"</span>,
+                        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"www.youtube.com/foodToEat"</span>
+                    }
+                ]
+            }
+        ]
+    }
+  ],
+  <span class="hljs-attr">"viewable_to_everyone"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"viewable_to"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/course</div>
+    </div>
+<h4 id="example-response-32">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{course_id}"</span>
+}</pre>
+</div></div><div data-title="View courses" class="keyline-top section contain clearfix " data-reactid="157"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="158"><h3 id="view-courses">View courses</h3>
+<p>View all courses. Optionally, filter courses by which are visible to specified patients.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) Filter list of courses to only those visible to this list specified patient IDs. By default, all courses visible at any patient are returned.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="159"><h4 id="example-request-body-32">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/course</div>
+    </div>
+<h4 id="example-response-33">Example response</h4>
+<pre class='hljs'>{
+    [
+        "course_id": "{course_id}",
+        "course_name": "Nutrition 101",
+        "course_weeks": [
+        {
+            "id": "{course_week_id}",
+            "name": "Week 1",
+            "course_sections": [
+                {
+                    "id": "{course_section_id}",
+                    "name": "Introduction to Nutrition",
+                    "course_lectures": [
+                        {
+                            "id": "{course_lecture_id}",
+                            "name": "Foods to Eat",
+                            "type": "Video",
+                            "url": "www.youtube.com/foodToEat",
+                            "viewed_by": ["{patient1_id}", "{patient2_id}"],
+                        }
+                    ]
+                }
+            ]
+        }
+        ],
+        "viewable_to_everyone": false,
+        "viewable_to": ["{patient1_id}", "{patient2_id}"]
+    ]
+}</pre>
+</div></div><div data-title="View course" class="keyline-top section contain clearfix " data-reactid="160"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="161"><h3 id="view-course">View course</h3>
+<p>View a specific course.</p>
+<p>No parameters.</p>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="162"><div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/course/<span class="strong">{course_id}</span></div>
+    </div>
+<h4 id="example-response-34">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"course_id"</span>: <span class="hljs-string">"{course_id}"</span>,
+  <span class="hljs-attr">"course_name"</span>: <span class="hljs-string">"Nutrition 101"</span>,
+  <span class="hljs-attr">"course_weeks"</span>: [
+    {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{course_week_id}"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Week 1"</span>,
+        <span class="hljs-attr">"course_sections"</span>: [
+            {
+                <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{course_section_id}"</span>,
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Introduction to Nutrition"</span>,
+                <span class="hljs-attr">"course_lectures"</span>: [
+                    {
+                        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{course_lecture_id}"</span>,
+                        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Foods to Eat"</span>,
+                        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Video"</span>,
+                        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"www.youtube.com/foodToEat"</span>,
+                        <span class="hljs-attr">"readBy"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+                    }
+                ]
+            }
+        ]
+    }
+  ],
+  <span class="hljs-attr">"viewable_to_everyone"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"viewable_to"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+</div></div><div data-title="Resources" class="keyline-top section contain clearfix " data-reactid="163"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="164"><h2 id="resources">Resources</h2>
+<p>Create and view resources. View analytics on resource read rates. </p>
+</div></div><div data-title="Create resource" class="keyline-top section contain clearfix " data-reactid="165"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="166"><h3 id="create-resource">Create resource</h3>
+<p>Create a resource. Optionally, specify which patients can view the resource. By default, everyone can view all resources. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Resource name</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>String</td>
+<td>Resource type (options are "Article", "Video", and "Quiz")</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>String</td>
+<td>Resource url</td>
+</tr>
+<tr>
+<td><code>viewable_to_everyone</code></td>
+<td>Bool</td>
+<td>Whether or not the resource is viewable to all patients</td>
+</tr>
+<tr>
+<td><code>viewable_to</code></td>
+<td>String array</td>
+<td>(optional) If the resource is not viewable to all patients, which patients the resource is viewable to</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="167"><h4 id="example-request-body-33">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Nutrition 101"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Video"</span>,
+  <span class="hljs-attr">"url"</span>: <span class="hljs-string">"www.youtube.com/foodToEat"</span>,
+  <span class="hljs-attr">"viewable_to_everyone"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"viewable_to"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/resource</div>
+    </div>
+<h4 id="example-response-35">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{resource_id}"</span>
+}</pre>
+</div></div><div data-title="View resources" class="keyline-top section contain clearfix " data-reactid="168"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="169"><h3 id="view-resources">View resources</h3>
+<p>View all resources. Optionally, filter resources by which are visible to specified patients.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) Filter list of resources to only those visible to this list specified patient IDs. By default, all resources visible at any patient are returned.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="170"><h4 id="example-request-body-34">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/resource</div>
+    </div>
+<h4 id="example-response-36">Example response</h4>
+<pre class='hljs'>{
+    [
+        {
+            "id": "{resource_id}",
+            "name": "Nutrition 101",
+            "type": "Video",
+            "url": "www.youtube.com/foodToEat",
+            "viewed_by": ["{patient1_id}", "{patient2_id}"],
+            "viewable_to_everyone": false,
+            "viewable_to": ["{patient1_id}", "{patient2_id}"]
+        }
+    ]
+}</pre>
+</div></div><div data-title="View resource" class="keyline-top section contain clearfix " data-reactid="171"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="172"><h3 id="view-resource">View resource</h3>
+<p>View a specific resource.</p>
+<p>No parameters.</p>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="173"><div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/resource/<span class="strong">{resource_id}</span></div>
+    </div>
+<h4 id="example-response-37">Example response</h4>
+<pre class='hljs'>{
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Nutrition 101"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Video"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"www.youtube.com/foodToEat"</span>,
+    <span class="hljs-attr">"viewed_by"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>],
+    <span class="hljs-attr">"viewable_to_everyone"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"viewable_to"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+</div></div><div data-title="Notifications" class="keyline-top section contain clearfix " data-reactid="174"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="175"><h2 id="notifications-1">Notifications</h2>
+<p>Set, cancel, and view one-time or recurring notifications for patients. </p>
+</div></div><div data-title="Create notification" class="keyline-top section contain clearfix " data-reactid="176"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="177"><h3 id="create-notification">Create notification</h3>
+<p>Set one-time or recurring notifications. Optionally, list specific patients notification should go to. By default, all notification go to all patients. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>String</td>
+<td>Title of notification</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>String</td>
+<td>Subtitle of notification</td>
+</tr>
+<tr>
+<td><code>repeats</code></td>
+<td>Bool</td>
+<td>Whether or not the notification repeats</td>
+</tr>
+<tr>
+<td><code>repeat_cadence</code></td>
+<td>String</td>
+<td>If repeats is true, how often the notification repeats (options are: "monthly", "weekly", and "daily")</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>Number</td>
+<td>If notification is sent only once, which year it's sent in</td>
+</tr>
+<tr>
+<td><code>month</code></td>
+<td>Number</td>
+<td>If notification is sent only once, which month it's sent in</td>
+</tr>
+<tr>
+<td><code>weekday</code></td>
+<td>Number</td>
+<td>If notification is sent weekly, which weekday the notification is sent</td>
+</tr>
+<tr>
+<td><code>day</code></td>
+<td>Number</td>
+<td>If notification is sent only once or repeats monthly, which day the notification is sent</td>
+</tr>
+<tr>
+<td><code>hour</code></td>
+<td>Number</td>
+<td>Which hour the notification is sent</td>
+</tr>
+<tr>
+<td><code>minute</code></td>
+<td>Number</td>
+<td>Which minute the notification is sent</td>
+</tr>
+<tr>
+<td><code>viewable_to_everyone</code></td>
+<td>Bool</td>
+<td>Whether or not the notification is viewable to all patients</td>
+</tr>
+<tr>
+<td><code>viewable_to</code></td>
+<td>String array</td>
+<td>If the notification is not viewable to all patients, which patients the notification is viewable to</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="178"><h4 id="example-request-body-35">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Meds"</span>,
+  <span class="hljs-attr">"subtitle"</span>: <span class="hljs-string">"Time to take your medication!"</span>,
+  <span class="hljs-attr">"repeats"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"year"</span>: <span class="hljs-number">2021</span>,
+  <span class="hljs-attr">"month"</span>: <span class="hljs-number">12</span>,
+  <span class="hljs-attr">"day"</span>: <span class="hljs-number">23</span>,
+  <span class="hljs-attr">"hour"</span>: <span class="hljs-number">8</span>,
+  <span class="hljs-attr">"minute"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"viewable_to_everyone"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"viewable_to"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/notifications</div>
+    </div>
+<h4 id="example-response-38">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{notification_id}"</span>
+}</pre>
+</div></div><div data-title="Cancel notification" class="keyline-top section contain clearfix " data-reactid="179"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="180"><h3 id="cancel-notification">Cancel notification</h3>
+<p>Cancel one-time or recurring notifications. Optionally, list specific patients notification should be cancelled for. By default, notification is cancelled for all patients. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+<td>Notification ID</td>
+</tr>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) List of patient IDs for whom the notification is going to be cancelled for.  By default, notification is cancelled for all patients.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="181"><h4 id="example-request-body-36">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{notification_id}"</span>,
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/notifications/cancel</div>
+    </div>
+<h4 id="example-response-39">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{notification_id}"</span>
+}</pre>
+</div></div><div data-title="Get active notifications" class="keyline-top section contain clearfix " data-reactid="182"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="183"><h3 id="get-active-notifications">Get active notifications</h3>
+<p>Get all active notification. Optionally, filter notifications based on patients. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) List of patient IDs for whom you want to retrieve all active notifications for.  By default, all active notifications for all patients are returned.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="184"><h4 id="example-request-body-37">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/notifications/active</div>
+    </div>
+<h4 id="example-response-40">Example response</h4>
+<pre class='hljs'>{
+  [
+      {
+        "title": "Meds",
+        "subtitle": "Time to take your medication!",
+        "created_at": 1637712345,
+        "repeats": false,
+        "year": 2021,
+        "month": 12,
+        "day": 23,
+        "hour": 8,
+        "minute": 0,
+        "viewable_to_everyone": false,
+        "viewable_to": ["{patient1_id}", "{patient2_id}"]
+      }
+  ]
+}</pre>
+</div></div><div data-title="Get cancelled notifications" class="keyline-top section contain clearfix " data-reactid="185"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="186"><h3 id="get-cancelled-notifications">Get cancelled notifications</h3>
+<p>Get all cancelled notification. Optionally, filter notifications based on patients. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) List of patient IDs for whom you want to retrieve all cancelled notifications for.  By default, all cancelled notifications for all patients are returned.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="187"><h4 id="example-request-body-38">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/notifications/cancelled</div>
+    </div>
+<h4 id="example-response-41">Example response</h4>
+<pre class='hljs'>{
+  [
+      {
+        "title": "Meds",
+        "subtitle": "Time to take your medication!",
+        "created_at": 1637712345,
+        "repeats": false,
+        "year": 2021,
+        "month": 12,
+        "day": 23,
+        "hour": 8,
+        "minute": 0,
+        "viewable_to_everyone": false,
+        "viewable_to": ["{patient1_id}", "{patient2_id}"]
+      }
+  ]
+}</pre>
+</div></div><div data-title="E-Prescribing" class="keyline-top section contain clearfix " data-reactid="188"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="189"><h2 id="e-prescribing">E-Prescribing</h2>
+<p>(Coming soon) Electronically prescribe non-controlled substances to patients. </p>
+</div></div><div data-title="Prescription Fulfillment" class="keyline-top section contain clearfix " data-reactid="190"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="191"><h2 id="prescription-fulfillment">Prescription Fulfillment</h2>
+<p>(Coming soon) Fill scripts, create custom packaging for medications, and ship medications directly to patients. </p>
+</div></div><div data-title="User Data" class="keyline-top section contain clearfix " data-reactid="192"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="193"><h2 id="user-data">User Data</h2>
+<p>Pull user data. </p>
+</div></div><div data-title="Get user name" class="keyline-top section contain clearfix " data-reactid="194"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="195"><h3 id="get-user-name">Get user name</h3>
+<p>Get user's first and last name.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+<td>User's ID</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="196"><h4 id="example-request-body-39">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{user_id}"</span>
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/user/name</div>
+    </div>
+<h4 id="example-response-42">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"Sally"</span>,
+  <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"Chen"</span>
+}</pre>
+</div></div><div data-title="Get user profile picture" class="keyline-top section contain clearfix " data-reactid="197"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="198"><h3 id="get-user-profile-picture">Get user profile picture</h3>
+<p>Get user's profile picture.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+<td>User's ID</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="199"><h4 id="example-request-body-40">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{user_id}"</span>
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/user/profilePicture</div>
+    </div>
+<h4 id="example-response-43">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"image_url"</span>: <span class="hljs-string">"gs://cloudstorage.com/89gsgs989"</span>,
+}</pre>
+</div></div><div data-title="Get data" class="keyline-top section contain clearfix " data-reactid="200"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="201"><h3 id="get-data">Get data</h3>
+<p>Get all data. Optionally, filtered returned data by user or by type of data (e.g. demographics, notes, etc.).</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patient_ids</code></td>
+<td>String array</td>
+<td>(optional) Filter returned data by user. By default, all data associated with any user is returned.</td>
+</tr>
+<tr>
+<td><code>types</code></td>
+<td>String array</td>
+<td>(optional) Filter returned data by type. By default, all data associated with any type is returned. Options are: 'demographics', 'messages', 'schedules', 'payments', 'health_records', 'care_plans', 'notes', 'surveys', 'care_teams', 'peer_groups', 'courses', 'resources', 'notifications', and 'prescriptions'.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="202"><pre class='hljs'>{
+  <span class="hljs-attr">"patient_ids"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>],
+  <span class="hljs-attr">"types"</span>: [<span class="hljs-string">"prescriptions"</span>, <span class="hljs-string">"demographics"</span>]
+}</pre>
+</div></div></div></div></div><div class="fixed-top space-left16" data-reactid="203"><div class="events fill-light bottom-shadow pad1 col6 pin-topright  " data-reactid="204"><div class="space-right1 small quiet inline" data-reactid="205">Show examples in:</div><div class="rounded-toggle inline short" data-reactid="206"><a class="strong active" data-reactid="207">cURL</a><a class="strong " data-reactid="208">cli</a><a class="strong " data-reactid="209">Python</a><a class="strong " data-reactid="210">JS</a><a class="strong " data-reactid="211">Java</a><a class="strong " data-reactid="212">ObjC</a><a class="strong " data-reactid="213">Swift</a></div><div class="fr pad0" data-reactid="214"><a title="Display as 1 column" style="cursor:pointer;" class="icon quiet caret-left pad0 fill-darken0 round" data-reactid="215"></a></div></div></div><div class="fill-dark dark bottom-shadow fixed-top pad0 width16" data-reactid="216"><a href="/" class="active space-top1 space-left1 pin-topleft icon round dark pad0 fill-red" data-reactid="217"></a><div class="strong small pad0
           
-          space-left4 line-height15" data-reactid="148">Avon Health API Documentation</div></div></div></div><!--STOP-->
+          space-left4 line-height15" data-reactid="218">Avon Health API Documentation</div></div></div></div><!--STOP-->
     <script src='bundle.js'></script>
   </body>
 </html>

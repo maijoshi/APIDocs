@@ -121,11 +121,11 @@ GET /careTeam
 }
 ```
 
-## Peer groups
+## Peer Groups
 
 Create, update, and view patient peer groups. 
 
-### Create care team
+### Create peer group
 
 Create a peer group
 
