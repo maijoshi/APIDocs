@@ -19,4 +19,14 @@ module.exports =
   '# Health Record\n' +
   fs.readFileSync('./content/healthRecord.md', 'utf8') + '\n' +
   '# Notes\n' +
-  fs.readFileSync('./content/notes.md', 'utf8') + '\n';
+  fs.readFileSync('./content/notes.md', 'utf8') + '\n' +
+  '# Surveys\n' +
+  fs.readFileSync('./content/surveys.md', 'utf8') + '\n' +
+  '# Groups\n' +
+  fs.readFileSync('./content/groups.md', 'utf8') + '\n' +
+  '# Educational Content\n' +
+  fs.readFileSync('./content/educationalContent.md', 'utf8') + '\n' +
+  '# Notifications\n' +
+  fs.readFileSync('./content/notifications.md', 'utf8') + '\n' +
+  '# Prescriptions\n' +
+  fs.readFileSync('./content/prescriptions.md', 'utf8') + '\n';
