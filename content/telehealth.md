@@ -10,423 +10,334 @@ Creates a message thread between selected users and returns a message thread ID.
 
 ```json
 {
-  "name": "foo",
-  "description": "bar"
+  "members": ["Sally", "Neal"]
 }
 ```
 
-Property | Description
----|---
-`name` | (optional) the name of the wobble
-`description` | (optional) a description of the wobble
+Property |  Type | Description
+---|---|---
+`members` | String | List of selected users to create message thread with
 
 ```endpoint
-POST /users/{userID}/messagethread
+POST /messagethread
 ```
 
 #### Example response
 
 ```json
-[
+{
+  "id": "{message_thread_id}"
+}
+```
+
+### Create a message 
+
+Creates a new message in message thread
+
+#### Example request body
+
+```json
+{
+  "messageThreadID": "{message_thread_id}",
+  "sender": "{user_id}",
+  "text": "This is a new message!",
+  "timestamp": 1637734361
+}
+```
+
+Property |  Type | Description
+---|---|---
+`message_thread_id` | String | Message thread ID that new message belongs to
+`sender` | String | ID of user sending the message
+`text` | String | Actual text of message
+`timestamp` | Number | Timestamp for message sent in terms of Unix epoch time
+```endpoint
+POST /message
+```
+
+#### Example response
+
+```json
+{
+  "id": "{message_id}"
+}
+```
+
+### Get message threads
+
+Get all message threads for user
+
+#### Example request body
+
+```json
+{
+  "user_id": "{user_id}"
+}
+```
+
+Property |  Type | Description
+---|---|---
+`user_id` | String | ID of user for which returning all the message threads for
+```endpoint
+GET /messagethreads
+```
+
+#### Example response
+
+```json
+{[
   {
-    "owner": "{username}",
-    "id": "{wobble_id}",
-    "created": "{timestamp}",
-    "modified": "{timestamp}"
-  },
-  {
-    "owner": "{username}",
-    "id": "{wobble_id}",
-    "created": "{timestamp}",
-    "modified": "{timestamp}"
+    "id": "{message_thread_id}",
+    "members": ["user1_id", "user2_id"],
+    "messages": [{
+      "sender": "user1_id",
+      "text": "Text of message",
+      "timestamp": 1637734361
+    }],
+    "mostRecentTimestamp": 1637734361,
+    "readBy": ["user1_id"]
   }
-]
+]}
 ```
 
-### Create message 
+### Get messages
 
-### Get all message threads
-
-### Get all messages in message thread
-
-### Get lastest message in thread
-
-### Get list of users user can message
-
-Creates a new, empty wobble.
-
-```endpoint
-POST /wobbles/v1/{username}
-```
-
-#### Example request
-
-```curl
-curl -X POST https://wobble.biz/wobbles/v1/{username}
-```
-
-```bash
-$ wbl wobbles create
-```
-
-```javascript
-client.createWobble({
-  name: 'example',
-  description: 'An example wobble'
-}, function(err, wobble) {
-  console.log(wobble);
-});
-```
-
-```python
-response = wobbles.create(
-  name='example', description='An example wobble')
-```
+Get all messages in a message thread
 
 #### Example request body
 
 ```json
 {
-  "name": "foo",
-  "description": "bar"
+  "message_thread_id": "{message_thread_id}"
 }
 ```
 
-Property | Description
----|---
-`name` | (optional) the name of the wobble
-`description` | (optional) a description of the wobble
-
-#### Example response
-
-```json
-{
-  "owner": "{username}",
-  "id": "{wobble_id}",
-  "name": null,
-  "description": null,
-  "created": "{timestamp}",
-  "modified": "{timestamp}"
-}
-```
-
-### 
-
-Returns a single wobble.
-
+Property |  Type | Description
+---|---|---
+`message_thread_id` | String | ID of message thread for which requesting all messages of
 ```endpoint
-GET /wobbles/v1/{username}/{wobble_id}
-```
-
-Retrieve information about an existing wobble.
-
-#### Example request
-
-```curl
-curl https://wobble.biz/wobbles/v1/{username}/{wobble_id}
-```
-
-```bash
-$ wbl wobble read-wobble wobble-id
-```
-
-```python
-attrs = wobbles.read_wobble(wobble_id).json()
-```
-
-```javascript
-client.readWobble('wobble-id',
-  function(err, wobble) {
-    console.log(wobble);
-  });
+GET /messages
 ```
 
 #### Example response
 
 ```json
 {
-  "owner": "{username}",
-  "id": "{wobble_id}",
-  "created": "{timestamp}",
-  "modified": "{timestamp}"
+  "members": ["user1_id", "user2_id"],
+  "messages": [{
+    "sender": "user1_id",
+    "text": "Text of message",
+    "timestamp": 1637734361
+  }],
+  "mostRecentTimestamp": 1637734361,
+  "readBy": ["user1_id"]
 }
 ```
 
-### Update a wobble
+### Get chattable users
 
-Updates the properties of a particular wobble.
-
-```endpoint
-PATCH /wobbles/v1/{username}/{wobble_id}
-```
-
-#### Example request
-
-```curl
-curl --request PATCH https://wobble.biz/wobbles/v1/{username}/{wobble_id} \
-  -d @data.json
-```
-
-```python
-resp = wobbles.update_wobble(
-  wobble_id,
-  name='updated example',
-  description='An updated example wobble'
-  ).json()
-```
-
-```bash
-$ wbl wobble update-wobble wobble-id
-```
-
-```javascript
-var options = { name: 'foo' };
-client.updateWobble('wobble-id', options, function(err, wobble) {
-  console.log(wobble);
-});
-```
+Get list of users that user is allowed to message
 
 #### Example request body
 
 ```json
 {
-  "name": "foo",
-  "description": "bar"
+  "user_id": "{user_id}",
+  "can_message": "peerGroup"
 }
 ```
 
-Property | Description
----|---
-`name` | (optional) the name of the wobble
-`description` | (optional) a description of the wobble
-
-#### Example response
-
-```json
-{
-  "owner": "{username}",
-  "id": "{wobble_id}",
-  "name": "foo",
-  "description": "bar",
-  "created": "{timestamp}",
-  "modified": "{timestamp}"
-}
-```
-
-### Delete a wobble
-
-Deletes a wobble, including all wibbles it contains.
-
+Property |  Type | Description
+---|---|---
+`user_id` | String | ID of user
+`can_message` | String | Name of group that patient is allowed to message, which can be one of the following options: "peerGroup", "careTeam", "peerGroupCareTeam", or "everyone"
 ```endpoint
-DELETE /wobbles/v1/{username}/{wobble_id}
-```
-
-#### Example request
-
-```curl
-curl -X DELETE https://wobble.biz/wobbles/v1/{username}/{wobble_id}
-```
-
-```bash
-$ wbl wobble delete-wobble wobble-id
-```
-
-```python
-resp = wobbles.delete_wobble(wobble_id)
-```
-
-```javascript
-client.deleteWobble('wobble-id', function(err) {
-  if (!err) console.log('deleted!');
-});
-```
-
-#### Example response
-
-> HTTP 204
-
-### List wibbles
-
-List all the wibbles in a wobble. The response body will be a
-WobbleCollection.
-
-```endpoint
-GET /wobbles/v1/{username}/{wobble_id}/wibbles
-```
-
-#### Example request
-
-```curl
-curl https://wobble.biz/wobbles/v1/{username}/{wobble_id}/wibbles
-```
-
-```bash
-$ wbl wobble list-wibbles wobble-id
-```
-
-```python
-collection = wobbles.list_wibbles(wobble_id).json()
-```
-
-```javascript
-client.listWobbles('wobble-id', {}, function(err, collection) {
-  console.log(collection);
-});
+GET /messages
 ```
 
 #### Example response
 
 ```json
 {
-  "type": "Wobble",
-  "wibbles": [
+  "members": ["user1_id", "user2_id"]
+}
+```
+
+## Scheduling
+
+Set and view appointment schedules. Enable patients to schedule and pay for appointments.
+
+### Set appointment schedule
+
+Set available appointment schedule, length of appointments, and cost of appointments for a provider
+
+#### Example request body
+
+```json
+{
+  "start_time": 1637734361,
+  "end_time": 1638934456,
+  "appointment_length": 30,
+  "paid_appointment": true,
+  "cost": 7000,
+  "create_video_call_link": true
+}
+```
+
+Property |  Type | Description
+---|---|---
+`start_time` | Number | Start time of provider's availability, written in terms of Unix epoch time
+`end_time` | Number | End time of provider's availability, written in terms of Unix epoch time
+`appointment_length` | Number | Length in minutes of each appointment
+`paid_appointment` | Bool | Whether or not the appointment is paid
+`cost` | Number | (optional) Cost of appointment in cents
+`create_video_call_link` | Bool | Whether or not to create a video call link for this appointment
+```endpoint
+POST /schedule/{provider_id}
+```
+
+#### Example response
+
+```json
+{
+  "appointment_schedule_id": "appointment_schedule_id"
+}
+```
+
+### Schedule appointment
+
+Schedule an appointment. If 'paid_appointment' has been set to true for this '{schedule_id}', prompts patient to pay for the appointment before booking. If 'create_video_call_link' has been set to true for this '{schedule_id}', creates video call link for the appointment. 
+
+#### Example request body
+
+```json
+{
+  "appointment_schedule_id": "{appointment_schedule_id}",
+  "start_time": 1637734361,
+  "end_time": 1637745679,
+}
+```
+
+Property |  Type | Description
+---|---|---
+`appointment_schedule_id` | String | ID of schedule booking this appointment in
+`start_time` | Number | Start time of provider's availability, written in terms of Unix epoch time
+`end_time` | Number | End time of provider's availability, written in terms of Unix epoch time
+```endpoint
+POST /schedule/appointment/{patient_id}
+```
+
+#### Example response
+
+```json
+{
+  "appointment_schedule_id": "appointment_schedule_id"
+}
+```
+
+### Get available appointments
+
+Get all available appointments. Optionally filter to only see available appointments for certain providers. 
+
+#### Example request body
+
+```json
+{
+  "start_time": 1637734361,
+  "end_time": 1638945679,
+  "providers": ["{provider1_id}", "{provider2_id}"],
+  
+}
+```
+
+Property |  Type | Description
+---|---|---
+`start_time` | Number | Start time of time frame from which you want all available appointments, written in terms of Unix epoch time.
+`end_time` | Number | End time of time frame from which you want all available appointments, written in terms of Unix epoch time.
+`providers` | String array | (optional) List of providers you want to see available appointments for. By default, see available appointments for all providers. 
+```endpoint
+GET /schedule/available
+```
+
+#### Example response
+
+```json
+{ 
+  [
     {
-      "id": "{wibble_id}",
-      "type": "Wobble",
-      "properties": {
-        "prop0": "value0"
-      }
-    },
-    {
-      "id": "{wibble_id}",
-      "type": "Wobble",
-      "properties": {
-        "prop0": "value0"
-      }
+      "appointment_schedule_id": "{appointment_schedule_id}",
+      "provider_id": "{provider_id}",
+      "start_time": 1637734361,
+      "end_time": 1638945679,
+      "appointment_length": 30
     }
   ]
 }
 ```
 
-### Insert or update a wibble
+### Get booked appointments
 
-Inserts or updates a wibble in a wobble. If there's already a wibble
-with the given ID in the wobble, it will be replaced. If there isn't
-a wibble with that ID, a new wibble is created.
-
-```endpoint
-PUT /wobbles/v1/{username}/{wobble_id}/wibbles/{wibble_id}
-```
-
-#### Example request
-
-```curl
-curl https://wobble.biz/wobbles/v1/{username}/{wobble_id}/wibbles/{wibble_id} \
-  -X PUT \
-  -d @file.geojson
-```
-
-```bash
-$ wbl wobble put-wibble wobble-id wibble-id 'geojson-wibble'
-```
-
-```javascript
-var wibble = {
-  "type": "Wobble",
-  "properties": { "name": "Null Island" }
-};
-client.insertWobble(wibble, 'wobble-id', function(err, wibble) {
-  console.log(wibble);
-});
-```
+Get all booked appointments (both past and upcoming) with URLs to starts and join the video call. Optionally filter to only see booked appointments for certain providers and/or certain patients.
 
 #### Example request body
 
 ```json
 {
-  "id": "{wibble_id}",
-  "type": "Wobble",
-  "properties": {
-    "prop0": "value0"
-  }
+  "start_time": 1637734361,
+  "end_time": 1638945679,
+  "providers": ["{provider1_id}", "{provider2_id}"],
+  "patients": ["{patient1_id}", "{patient2_id}"]
 }
 ```
 
-Property | Description
---- | ---
-`id` | the id of an existing wibble in the wobble
-
-#### Example response
-
-```json
-{
-  "id": "{wibble_id}",
-  "type": "Wobble",
-  "properties": {
-    "prop0": "value0"
-  }
-}
-```
-
-### Retrieve a wibble
-
-Retrieves a wibble in a wobble.
-
+Property |  Type | Description
+---|---|---
+`start_time` | Number | Start time of time frame from which you want all booked appointments, written in terms of Unix epoch time.
+`end_time` | Number | End time of time frame from which you want all booked appointments, written in terms of Unix epoch time.
+`providers` | String array | (optional) List of providers you want to see booked appointments for. By default, see booked appointments for all providers. 
+`patients` | String array | (optional) List of patients you want to see booked appointments for. By default, see booked appointments for all providers. 
 ```endpoint
-GET /wobbles/v1/{username}/{wobble_id}/wibbles/{wibble_id}
-```
-
-#### Example request
-
-```curl
-curl https://wobble.biz/wobbles/v1/{username}/{wobble_id}/wibbles/{wibble_id}
-```
-
-```bash
-$ wbl wobble read-wibble wobble-id wibble-id
-```
-
-```javascript
-client.readWobble('wibble-id', 'wobble-id',
-  function(err, wibble) {
-    console.log(wibble);
-  });
-```
-
-```python
-wibble = wobbles.read_wibble(wobble_id, '2').json()
+GET /schedule/booked
 ```
 
 #### Example response
 
 ```json
-{
-  "id": "{wibble_id}",
-  "type": "Wobble",
-  "properties": {
-    "prop0": "value0"
-  }
+{ 
+  [
+    {
+      "appointment": "{appointment_id}",
+      "provider_id": "{provider_id}",
+      "patient_id": "{patient_id}",
+      "start_time": 1637734361,
+      "end_time": 1638945679,
+      "appointment_length": 30,
+      "appointment_join_url": "https://us02web.zoom.us/s/83531877803?zak=58963y896",
+      "appointment_start_url": "https://us02web.zoom.us/s/83531877803?zak=7592u52fk"
+    }
+  ]
 }
 ```
 
-### Delete a wibble
+### Get appointment details
 
-Removes a wibble from a wobble.
+Get appointment details for a particular appointment id. 
+
+No parameters.
 
 ```endpoint
-DELETE /wobbles/v1/{username}/{wobble_id}/wibbles/{wibble_id}
-```
-
-#### Example request
-
-```javascript
-client.deleteWobble('wibble-id', 'wobble-id', function(err, wibble) {
-  if (!err) console.log('deleted!');
-});
-```
-
-```curl
-curl -X DELETE https://wobble.biz/wobbles/v1/{username}/{wobble_id}/wibbles/{wibble_id}
-```
-
-```python
-resp = wobbles.delete_wibble(wobble_id, wibble_id)
-```
-
-```bash
-$ wbl wobble delete-wibble wobble-id wibble-id
+GET /schedule/{appointment_id}
 ```
 
 #### Example response
 
-> HTTP 204
+```json
+{ 
+  "provider_id": "{provider_id}",
+  "patient_id": "{patient_id}",
+  "start_time": 1637734361,
+  "end_time": 1638945679,
+  "appointment_length": 30,
+  "appointment_join_url": "https://us02web.zoom.us/s/83531877803?zak=5396839"
+}
+```

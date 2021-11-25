@@ -10,11 +10,434 @@
     <link href='css/railscasts.css' rel='stylesheet' />
   </head>
   <body>
-    <!--START--><div id='app'><div class="container unlimiter" data-reactroot="" data-reactid="1" data-react-checksum="-1889292754"><div class="fixed-top fixed-right space-left16" data-reactid="2"><div class="fill-light col6 pin-right" data-reactid="3"></div></div><div class="space-top5 scroll-styled overflow-auto pad1 width16 sidebar fixed-left fill-dark dark" data-reactid="4"><div class="pad0x small" data-reactid="5"><div class="small pad0x quiet space-top1" data-reactid="6">Introduction</div><a href="#api" class="line-height15 pad0x pad00y quiet block " data-reactid="7">API</a></div></div><div class="space-left16" data-reactid="8"><div class="" data-reactid="9"><div class="clearfix" data-reactid="10"><div data-title="API" class="keyline-top section contain clearfix " data-reactid="11"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="12"><h2 id="api">API</h2>
+    <!--START--><div id='app'><div class="container unlimiter" data-reactroot="" data-reactid="1" data-react-checksum="-1489500107"><div class="fixed-top fixed-right space-left16" data-reactid="2"><div class="fill-light col6 pin-right" data-reactid="3"></div></div><div class="space-top5 scroll-styled overflow-auto pad1 width16 sidebar fixed-left fill-dark dark" data-reactid="4"><div class="pad0x small" data-reactid="5"><div class="small pad0x quiet space-top1" data-reactid="6">Introduction</div><a href="#api" class="line-height15 pad0x pad00y quiet block " data-reactid="7">API</a><div class="small pad0x quiet space-top1" data-reactid="8">Telehealth</div><a href="#messaging" class="line-height15 pad0x pad00y quiet block " data-reactid="9">Messaging</a><a href="#scheduling" class="line-height15 pad0x pad00y quiet block " data-reactid="10">Scheduling</a><div class="small pad0x quiet space-top1" data-reactid="11">Payment</div></div></div><div class="space-left16" data-reactid="12"><div class="" data-reactid="13"><div class="clearfix" data-reactid="14"><div data-title="API" class="keyline-top section contain clearfix " data-reactid="15"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="16"><h2 id="api">API</h2>
 <p>Welcome to Avon Health's API documentation!</p>
-</div></div></div></div></div><div class="fixed-top space-left16" data-reactid="13"><div class="events fill-light bottom-shadow pad1 col6 pin-topright  " data-reactid="14"><div class="space-right1 small quiet inline" data-reactid="15">Show examples in:</div><div class="rounded-toggle inline short" data-reactid="16"><a class="strong active" data-reactid="17">cURL</a><a class="strong " data-reactid="18">cli</a><a class="strong " data-reactid="19">Python</a><a class="strong " data-reactid="20">JS</a><a class="strong " data-reactid="21">Java</a><a class="strong " data-reactid="22">ObjC</a><a class="strong " data-reactid="23">Swift</a></div><div class="fr pad0" data-reactid="24"><a title="Display as 1 column" style="cursor:pointer;" class="icon quiet caret-left pad0 fill-darken0 round" data-reactid="25"></a></div></div></div><div class="fill-dark dark bottom-shadow fixed-top pad0 width16" data-reactid="26"><a href="/" class="active space-top1 space-left1 pin-topleft icon round dark pad0 fill-red" data-reactid="27"></a><div class="strong small pad0
+</div></div><div data-title="Messaging" class="keyline-top section contain clearfix " data-reactid="17"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="18"><h2 id="messaging">Messaging</h2>
+<p>Enable patients and providers to individually and group message others.</p>
+</div></div><div data-title="Create a message thread" class="keyline-top section contain clearfix " data-reactid="19"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="20"><h3 id="create-a-message-thread">Create a message thread</h3>
+<p>Creates a message thread between selected users and returns a message thread ID. If message thread already exists between selected users, returns existing messaging thread ID.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>members</code></td>
+<td>String</td>
+<td>List of selected users to create message thread with</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="21"><h4 id="example-request-body">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"members"</span>: [<span class="hljs-string">"Sally"</span>, <span class="hljs-string">"Neal"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/messagethread</div>
+    </div>
+<h4 id="example-response">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{message_thread_id}"</span>
+}</pre>
+</div></div><div data-title="Create a message" class="keyline-top section contain clearfix " data-reactid="22"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="23"><h3 id="create-a-message">Create a message</h3>
+<p>Creates a new message in message thread</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message_thread_id</code></td>
+<td>String</td>
+<td>Message thread ID that new message belongs to</td>
+</tr>
+<tr>
+<td><code>sender</code></td>
+<td>String</td>
+<td>ID of user sending the message</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>String</td>
+<td>Actual text of message</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>Number</td>
+<td>Timestamp for message sent in terms of Unix epoch time</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="24"><h4 id="example-request-body-1">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"messageThreadID"</span>: <span class="hljs-string">"{message_thread_id}"</span>,
+  <span class="hljs-attr">"sender"</span>: <span class="hljs-string">"{user_id}"</span>,
+  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"This is a new message!"</span>,
+  <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1637734361</span>
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/message</div>
+    </div>
+<h4 id="example-response-1">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"{message_id}"</span>
+}</pre>
+</div></div><div data-title="Get message threads" class="keyline-top section contain clearfix " data-reactid="25"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="26"><h3 id="get-message-threads">Get message threads</h3>
+<p>Get all message threads for user</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>String</td>
+<td>ID of user for which returning all the message threads for</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="27"><h4 id="example-request-body-2">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"{user_id}"</span>
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/messagethreads</div>
+    </div>
+<h4 id="example-response-2">Example response</h4>
+<pre class='hljs'>{[
+  {
+    "id": "{message_thread_id}",
+    "members": ["user1_id", "user2_id"],
+    "messages": [{
+      "sender": "user1_id",
+      "text": "Text of message",
+      "timestamp": 1637734361
+    }],
+    "mostRecentTimestamp": 1637734361,
+    "readBy": ["user1_id"]
+  }
+]}</pre>
+</div></div><div data-title="Get messages" class="keyline-top section contain clearfix " data-reactid="28"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="29"><h3 id="get-messages">Get messages</h3>
+<p>Get all messages in a message thread</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message_thread_id</code></td>
+<td>String</td>
+<td>ID of message thread for which requesting all messages of</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="30"><h4 id="example-request-body-3">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"message_thread_id"</span>: <span class="hljs-string">"{message_thread_id}"</span>
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/messages</div>
+    </div>
+<h4 id="example-response-3">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"members"</span>: [<span class="hljs-string">"user1_id"</span>, <span class="hljs-string">"user2_id"</span>],
+  <span class="hljs-attr">"messages"</span>: [{
+    <span class="hljs-attr">"sender"</span>: <span class="hljs-string">"user1_id"</span>,
+    <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Text of message"</span>,
+    <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1637734361</span>
+  }],
+  <span class="hljs-attr">"mostRecentTimestamp"</span>: <span class="hljs-number">1637734361</span>,
+  <span class="hljs-attr">"readBy"</span>: [<span class="hljs-string">"user1_id"</span>]
+}</pre>
+</div></div><div data-title="Get chattable users" class="keyline-top section contain clearfix " data-reactid="31"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="32"><h3 id="get-chattable-users">Get chattable users</h3>
+<p>Get list of users that user is allowed to message</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>String</td>
+<td>ID of user</td>
+</tr>
+<tr>
+<td><code>can_message</code></td>
+<td>String</td>
+<td>Name of group that patient is allowed to message, which can be one of the following options: "peerGroup", "careTeam", "peerGroupCareTeam", or "everyone"</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="33"><h4 id="example-request-body-4">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"{user_id}"</span>,
+  <span class="hljs-attr">"can_message"</span>: <span class="hljs-string">"peerGroup"</span>
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/messages</div>
+    </div>
+<h4 id="example-response-4">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"members"</span>: [<span class="hljs-string">"user1_id"</span>, <span class="hljs-string">"user2_id"</span>]
+}</pre>
+</div></div><div data-title="Scheduling" class="keyline-top section contain clearfix " data-reactid="34"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="35"><h2 id="scheduling">Scheduling</h2>
+<p>Set and view appointment schedules. Enable patients to schedule and pay for appointments.</p>
+</div></div><div data-title="Set appointment schedule" class="keyline-top section contain clearfix " data-reactid="36"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="37"><h3 id="set-appointment-schedule">Set appointment schedule</h3>
+<p>Set available appointment schedule, length of appointments, and cost of appointments for a provider</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start_time</code></td>
+<td>Number</td>
+<td>Start time of provider's availability, written in terms of Unix epoch time</td>
+</tr>
+<tr>
+<td><code>end_time</code></td>
+<td>Number</td>
+<td>End time of provider's availability, written in terms of Unix epoch time</td>
+</tr>
+<tr>
+<td><code>appointment_length</code></td>
+<td>Number</td>
+<td>Length in minutes of each appointment</td>
+</tr>
+<tr>
+<td><code>paid_appointment</code></td>
+<td>Bool</td>
+<td>Whether or not the appointment is paid</td>
+</tr>
+<tr>
+<td><code>cost</code></td>
+<td>Number</td>
+<td>(optional) Cost of appointment in cents</td>
+</tr>
+<tr>
+<td><code>create_video_call_link</code></td>
+<td>Bool</td>
+<td>Whether or not to create a video call link for this appointment</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="38"><h4 id="example-request-body-5">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
+  <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1638934456</span>,
+  <span class="hljs-attr">"appointment_length"</span>: <span class="hljs-number">30</span>,
+  <span class="hljs-attr">"paid_appointment"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"cost"</span>: <span class="hljs-number">3000</span>,
+  <span class="hljs-attr">"create_video_call_link"</span>: <span class="hljs-literal">true</span>
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/schedule/<span class="strong">{provider_id}</span></div>
+    </div>
+<h4 id="example-response-5">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"appointment_schedule_id"</span>: <span class="hljs-string">"appointment_schedule_id"</span>
+}</pre>
+</div></div><div data-title="Schedule appointment" class="keyline-top section contain clearfix " data-reactid="39"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="40"><h3 id="schedule-appointment">Schedule appointment</h3>
+<p>Schedule an appointment. If 'paid_appointment' has been set to true for this '{schedule_id}', prompts patient to pay for the appointment before booking. If 'create_video_call_link' has been set to true for this '{schedule_id}', creates video call link for the appointment. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>appointment_schedule_id</code></td>
+<td>String</td>
+<td>ID of schedule booking this appointment in</td>
+</tr>
+<tr>
+<td><code>start_time</code></td>
+<td>Number</td>
+<td>Start time of provider's availability, written in terms of Unix epoch time</td>
+</tr>
+<tr>
+<td><code>end_time</code></td>
+<td>Number</td>
+<td>End time of provider's availability, written in terms of Unix epoch time</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="41"><h4 id="example-request-body-6">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"appointment_schedule_id"</span>: <span class="hljs-string">"{appointment_schedule_id}"</span>,
+  <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
+  <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1637745679</span>,
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>POST</div>
+      <div class='pad0 code small endpoint-url'>/schedule/appointment/<span class="strong">{patient_id}</span></div>
+    </div>
+<h4 id="example-response-6">Example response</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"appointment_schedule_id"</span>: <span class="hljs-string">"appointment_schedule_id"</span>
+}</pre>
+</div></div><div data-title="Get available appointments" class="keyline-top section contain clearfix " data-reactid="42"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="43"><h3 id="get-available-appointments">Get available appointments</h3>
+<p>Get all available appointments. Optionally filter to only see available appointments for certain providers. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start_time</code></td>
+<td>Number</td>
+<td>Start time of time frame from which you want all available appointments, written in terms of Unix epoch time.</td>
+</tr>
+<tr>
+<td><code>end_time</code></td>
+<td>Number</td>
+<td>End time of time frame from which you want all available appointments, written in terms of Unix epoch time.</td>
+</tr>
+<tr>
+<td><code>providers</code></td>
+<td>String array</td>
+<td>(optional) List of providers you want to see available appointments for. By default, see available appointments for all providers.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="44"><h4 id="example-request-body-7">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
+  <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1638945679</span>,
+  <span class="hljs-attr">"providers"</span>: [<span class="hljs-string">"{provider1_id}"</span>, <span class="hljs-string">"{provider2_id}"</span>],
+  
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/schedule/available</div>
+    </div>
+<h4 id="example-response-7">Example response</h4>
+<pre class='hljs'>{ 
+  [
+    {
+      "appointment_schedule_id": "{appointment_schedule_id}",
+      "provider_id": "{provider_id}",
+      "start_time": 1637734361,
+      "end_time": 1638945679,
+      "appointment_length": 30
+    }
+  ]
+}</pre>
+</div></div><div data-title="Get booked appointments" class="keyline-top section contain clearfix " data-reactid="45"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="46"><h3 id="get-booked-appointments">Get booked appointments</h3>
+<p>Get all booked appointments (both past and upcoming) with URLs to starts and join the video call. Optionally filter to only see booked appointments for certain providers and/or certain patients.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start_time</code></td>
+<td>Number</td>
+<td>Start time of time frame from which you want all booked appointments, written in terms of Unix epoch time.</td>
+</tr>
+<tr>
+<td><code>end_time</code></td>
+<td>Number</td>
+<td>End time of time frame from which you want all booked appointments, written in terms of Unix epoch time.</td>
+</tr>
+<tr>
+<td><code>providers</code></td>
+<td>String array</td>
+<td>(optional) List of providers you want to see booked appointments for. By default, see booked appointments for all providers.</td>
+</tr>
+<tr>
+<td><code>patients</code></td>
+<td>String array</td>
+<td>(optional) List of patients you want to see booked appointments for. By default, see booked appointments for all providers.</td>
+</tr>
+</tbody>
+</table>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="47"><h4 id="example-request-body-8">Example request body</h4>
+<pre class='hljs'>{
+  <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
+  <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1638945679</span>,
+  <span class="hljs-attr">"providers"</span>: [<span class="hljs-string">"{provider1_id}"</span>, <span class="hljs-string">"{provider2_id}"</span>],
+  <span class="hljs-attr">"patients"</span>: [<span class="hljs-string">"{patient1_id}"</span>, <span class="hljs-string">"{patient2_id}"</span>]
+}</pre>
+<div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/schedule/booked</div>
+    </div>
+<h4 id="example-response-8">Example response</h4>
+<pre class='hljs'>{ 
+  [
+    {
+      "appointment": "{appointment_id}",
+      "provider_id": "{provider_id}",
+      "patient_id": "{patient_id}",
+      "start_time": 1637734361,
+      "end_time": 1638945679,
+      "appointment_length": 30,
+      "appointment_join_url": "https://us02web.zoom.us/s/83531877803?zak=58963y896",
+      "appointment_start_url": "https://us02web.zoom.us/s/83531877803?zak=7592u52fk"
+    }
+  ]
+}</pre>
+</div></div><div data-title="Get appointment details" class="keyline-top section contain clearfix " data-reactid="48"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="49"><h3 id="get-appointment-details">Get appointment details</h3>
+<p>Get appointment details for a particular appointment id. </p>
+<p>No parameters.</p>
+</div><div class="space-bottom4 col6 pad2 prose clip fill-light space-top5" data-reactid="50"><div class='endpoint dark fill-dark round '>
+      <div class='round-left pad0y pad1x fill-lighten0 code small endpoint-method'>GET</div>
+      <div class='pad0 code small endpoint-url'>/schedule/<span class="strong">{appointment_id}</span></div>
+    </div>
+<h4 id="example-response-9">Example response</h4>
+<pre class='hljs'>{ 
+  <span class="hljs-attr">"provider_id"</span>: <span class="hljs-string">"{provider_id}"</span>,
+  <span class="hljs-attr">"patient_id"</span>: <span class="hljs-string">"{patient_id}"</span>,
+  <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1637734361</span>,
+  <span class="hljs-attr">"end_time"</span>: <span class="hljs-number">1638945679</span>,
+  <span class="hljs-attr">"appointment_length"</span>: <span class="hljs-number">30</span>,
+  <span class="hljs-attr">"appointment_join_url"</span>: <span class="hljs-string">"https://us02web.zoom.us/s/83531877803?zak=5396839"</span>
+}</pre>
+</div></div></div></div></div><div class="fixed-top space-left16" data-reactid="51"><div class="events fill-light bottom-shadow pad1 col6 pin-topright  " data-reactid="52"><div class="space-right1 small quiet inline" data-reactid="53">Show examples in:</div><div class="rounded-toggle inline short" data-reactid="54"><a class="strong active" data-reactid="55">cURL</a><a class="strong " data-reactid="56">cli</a><a class="strong " data-reactid="57">Python</a><a class="strong " data-reactid="58">JS</a><a class="strong " data-reactid="59">Java</a><a class="strong " data-reactid="60">ObjC</a><a class="strong " data-reactid="61">Swift</a></div><div class="fr pad0" data-reactid="62"><a title="Display as 1 column" style="cursor:pointer;" class="icon quiet caret-left pad0 fill-darken0 round" data-reactid="63"></a></div></div></div><div class="fill-dark dark bottom-shadow fixed-top pad0 width16" data-reactid="64"><a href="/" class="active space-top1 space-left1 pin-topleft icon round dark pad0 fill-red" data-reactid="65"></a><div class="strong small pad0
           
-          space-left4 line-height15" data-reactid="28">Avon Health API Documentation</div></div></div></div><!--STOP-->
+          space-left4 line-height15" data-reactid="66">Avon Health API Documentation</div></div></div></div><!--STOP-->
     <script src='bundle.js'></script>
   </body>
 </html>

@@ -11,4 +11,12 @@ var fs = require('fs');
  */
 module.exports =
   '# Introduction\n' +
-  fs.readFileSync('./content/introduction.md', 'utf8') + '\n';
+  fs.readFileSync('./content/introduction.md', 'utf8') + '\n' +
+  '# Telehealth\n' +
+  fs.readFileSync('./content/telehealth.md', 'utf8') + '\n' +
+  '# Payment\n' +
+  fs.readFileSync('./content/payment.md', 'utf8') + '\n' +
+  '# Health Record\n' +
+  fs.readFileSync('./content/healthRecord.md', 'utf8') + '\n' +
+  '# Notes\n' +
+  fs.readFileSync('./content/notes.md', 'utf8') + '\n';
